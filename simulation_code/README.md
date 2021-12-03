@@ -1,8 +1,8 @@
 ## Installation
 
-Instructions for installing LAMMPS can be found here (Princeton Della Link)
+Instructions for installing LAMMPS can be found [here](https://github.com/PrincetonUniversity/install_lammps/blob/master/01_installing/ins/della/scripts.md#della-cpu)
 
-LAMMPS(4Feb2020 version) is installed with the script X.  (Check out adroit files too)
+LAMMPS(4Feb2020 version) is installed with "lammps_mixed_prec_della.sh".
 
 ## Simulation descriptions
 
