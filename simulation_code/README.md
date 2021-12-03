@@ -15,9 +15,10 @@ collide and equilibrate and one in which molecule are squeezed
 uniaxially. Simulation files named "Runner[%d].in" in "_equil/In/"
 and "_squeeze/In/" are used to simulate the two periods, respectively.
 
-Two key parameters of the simulations are: (1) whether the "pilus"
-atoms are localized (Patch=1) or uniformly distributed (Patch=0); and (2)
-the adhesion strength between "pilus" atoms (denoted by App).
+Two key parameters of the simulations are: 
+1. whether the "pilus" atoms are localized (Patch=1) or uniformly distributed (Patch=0); and
+2. the adhesion strength between "pilus" atoms (denoted by App).
+
 Correspondence between parameter values and experimental strains:
 
 	Patch = 1, App = 8 –– ΔpilT
