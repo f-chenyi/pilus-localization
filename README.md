@@ -51,3 +51,5 @@ open .mat files.
 
 
 ## Simulation
+
+Details about the simulation are described [here](https://github.com/f-chenyi/pilus-localization/blob/main/simulation_code/README.md)
