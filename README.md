@@ -1,10 +1,10 @@
 ## Installation
 Required python packages (suggested version) to run the code:
-	python     (3.8.5)
-	numpy      (1.19.2)
-	scipy      (1.5.2)
- 	matplotlib (3.3.2)
-	opencv     (4.5.3.56)
+- python     (3.8.5)
+- numpy      (1.19.2)
+- scipy      (1.5.2)
+- matplotlib (3.3.2)
+- opencv     (4.5.3.56)
 
 MATLAB (Mathworks, 2020a) is required to run the .m script and 
 open .mat files.
