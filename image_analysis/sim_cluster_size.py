@@ -25,16 +25,11 @@ except ModuleNotFoundError:
 
 
 
-# ### Set up input/output directories
 
-'''
-One-time processing: rename all the input files with the same format "CE000rep0_000.tif"
-'''
-# _path    = "stat_input/vortexed/"
-# _filelist= os.listdir(_path)
-# for _filename in _filelist:
-#     os.rename(_path+_filename, _path+_filename.replace("vortexed",""))
-
+    
+    
+    
+    
 
 # define parameter dictionary
 param = {
@@ -47,7 +42,7 @@ keyboardinput = sys.argv[1::]
 aux_io.parse_input(param,keyboardinput)
 
 # io parameters
-fpath_input  = "../batch_simulation/squeeze/"
+fpath_input  = "../simulation_output/squeeze/"
 fpath_output = "stat_output/sim_cluster/"
 fname_img    = "Patch_%d_Box_%d/App_%.1f_Rc_%.1f/Rep_%03d/img_bin.mat"
 
@@ -69,8 +64,9 @@ if _SAVE_OUTPUT:
 
 
 
-#rep = 1
-#idd = 1
+
+        
+        
 tmp_array = np.zeros( int(param["Ntech"]) )
 
 for rep in range(1,int(param["Ntech"]+1)):
