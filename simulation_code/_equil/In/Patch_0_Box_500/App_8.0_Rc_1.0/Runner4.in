@@ -1,0 +1,41 @@
+units nano 
+boundary p p p 
+atom_style bond
+
+processors 1 * *
+
+# read_restart Out/Rep_004/Out.restart
+read_data ../Position.initial
+
+log Out/Rep_004/Out.log
+
+pair_style hybrid/overlay lj/cut 11.2246 soft 1
+pair_coeff 1 1 lj/cut 4.14 10 11.2246
+pair_coeff 1 2 lj/cut 4.14 6 6.7348
+pair_coeff 2 2 soft -33.12 1
+pair_modify shift yes
+
+group Pcell molecule > 0
+
+neighbor 8 bin 
+neigh_modify every 1 delay 0
+neigh_modify exclude molecule/intra Pcell
+
+fix 1 Pcell rigid/nve/small molecule langevin 300 300 1 2092119
+
+thermo 1000000
+timestep 0.1
+
+compute 1 all displace/atom
+dump 1 all image 1000000 Out/Rep_004/image.*.jpg type type zoom 1.1 box yes 0.01 view 60 60 size 1000 1000 shiny 0.5
+dump_modify 1 acolor 1 red
+dump_modify 1 acolor 2 green
+dump_modify 1 adiam 1 10
+dump_modify 1 adiam 2 2
+dump 2 all xyz 1000000 Out/Rep_004/Out.xyz
+dump 3 all custom 1000000 Out/Rep_004/Out.dump id c_1[1] c_1[2] c_1[3]
+
+run 100000000
+
+write_restart Out/Rep_004/Out.restart
+
