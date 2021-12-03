@@ -25,15 +25,6 @@ except ModuleNotFoundError:
 
 
 
-# ### Set up input/output directories
-
-'''
-One-time processing: rename all the input files with the same format "CE000rep0_000.tif"
-'''
-# _path    = "stat_input/vortexed/"
-# _filelist= os.listdir(_path)
-# for _filename in _filelist:
-#     os.rename(_path+_filename, _path+_filename.replace("vortexed",""))
 
 
 # define parameter dictionary
