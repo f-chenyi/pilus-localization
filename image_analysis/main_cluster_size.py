@@ -59,8 +59,8 @@ if _SAVE_OUTPUT:
 
 
 
-#rep = 1
-#idd = 1
+
+        
 tmp_array = np.zeros( [int(param["Nbio"]),int(param["Ntech"])] )
 
 for rep in range(1,int(param["Nbio"]+1)):
